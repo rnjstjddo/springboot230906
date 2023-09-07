@@ -1,0 +1,43 @@
+{{>layout/header}}
+
+<article>
+
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
+            게시글목록
+        </div>
+
+        <a class="btn btn-outline-success" href="/posts/save">게시글등록</a>
+
+        <form>
+        </form>
+        <table class="table table-hover">
+            <tr>
+                <th scope="col" width="150px">번호</th>
+                <th scope="col" width="300px">제목</th>
+                <th scope="col" width="200px">작성자</th>
+                <th scope="col" width="200px">작성일자</th>
+                <th scope="col" width="200px">수정일자</th>
+            </tr>
+            <tbody id="tbody">
+                {{#posts}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                        <td>{{author}}</td>
+                        <td>{{createdDate}}</td>
+                        <td>{{modifiedDate}}</td>
+                    </tr>
+                {{/posts}}
+            </tbody>
+        </table>
+
+
+    </div><!-- 컨테이너 -->
+</article>
+
+
+{{>layout/footer}}

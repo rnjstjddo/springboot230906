@@ -1,0 +1,46 @@
+{{>layout/header}}
+
+<article>
+
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
+            게시글등록
+        </div>
+
+        <a class="btn btn-outline-success" href="/">목록가기</a>
+
+        <form>
+            <div class="form-group">
+                제목
+                <input class="form-control" type="text"  name="title"  id="title" placeholder="제목을 작성해주세요" required/>
+            </div>
+
+            <br>
+            <br>
+            <div class="form-group">
+                작성자
+                <input class="form-control" type="text"  name="author" id="author" placeholder="작성자를 작성해주세요" required/>
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="" class="form-label">내용</label>
+                <textarea class="form-control"  name="content" id="content" rows="3" placeholder="내용을 작성해주세요"  required></textarea>
+            </div>
+            <br>
+            <br>
+
+            <hr>
+            <button type="submit" style="display:block;margin:auto;" class="btn btn-outline-primary registerBtn" id="registerBtn">방명록등록하기</button>
+
+        </form>
+
+
+    </div><!-- 컨테이너 -->
+</article>
+
+
+{{>layout/footer}}
